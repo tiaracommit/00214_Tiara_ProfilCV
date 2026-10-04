@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --background: #FAF7F8;
+    --surface: #FFFFFF;
+    --primary: #684F4F;
+    --secondary: #D9A9B3;
+    --accent: #F7C8D0;
+    --text: #2E2A2A;
+    --muted: #8C8185;
+    --border: #E7E0E4;
+}
+
+body {
+    background-color: var(--background);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px;
+    color: var(--text);
+    font-family: "DM Sans", Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Fraunces", serif;
+    color: var(--primary);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background-color: var(--surface);
+    padding: 60px 40px;
+    margin-bottom: 30px;
+    border-radius: 24px;
+    text-align: center;
+}
+
+header img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+header h1 {
+    font-size: 52px;
+    margin: 25px 0 10px;
+    letter-spacing: -1px;
+}
+
+header p {
+    font-size: 18px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background-color: var(--surface);
+    padding: 10px 14px;
+    margin-bottom: 30px;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    display: inline-block;
+    padding: 9px 14px;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--primary);
+    background-color: var(--accent);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+main section {
+    background-color: var(--surface);
+    padding: 45px;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+}
+
+main section h2 {
+    font-size: 36px;
+    margin-top: 0;
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+main section p {
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: var(--muted);
+}
+
+main section ul {
+    padding-left: 20px;
+}
+
+main section li {
+    margin-bottom: 10px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+#tentang p {
+    max-width: 720px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* =========================
+   PROFILE
+========================= */
+
+#biodata ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#biodata li {
+    margin-bottom: 12px;
+    color: var(--text);
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+#pendidikan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#pendidikan li {
+    background-color: var(--background);
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+#pendidikan li:hover {
+    transform: translateY(-4px);
+    border-color: var(--secondary);
+}
+
+#pendidikan li h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#pendidikan li p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+#keahlian h3 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+#keahlian ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+#keahlian li {
+    list-style: none;
+    background-color: var(--background);
+    color: var(--primary);
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#keahlian li:hover {
+    background-color: var(--accent);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   ORGANIZATIONS
+========================= */
+
+#organisasi ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#organisasi li {
+    background-color: var(--background);
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+#organisasi li:hover {
+    transform: translateY(-4px);
+    border-color: var(--secondary);
+}
+
+#organisasi li h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#organisasi li p {
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+#pengalaman ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#pengalaman li {
+    background-color: var(--background);
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+#pengalaman li:hover {
+    transform: translateY(-4px);
+    border-color: var(--secondary);
+}
+
+#pengalaman li h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 23px;
+}
+
+#pengalaman li p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+#proyek ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+#proyek li {
+    background-color: var(--background);
+    padding: 32px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+#proyek li:hover {
+    transform: translateY(-5px);
+    border-color: var(--secondary);
+}
+
+#proyek li h3 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+#proyek li p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+#proyek li a {
+    display: inline-block;
+    padding: 10px 16px;
+    margin-right: 8px;
+    background-color: var(--accent);
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Perbaikan specificity tombol */
+#proyek li a.project-primary {
+    background-color: var(--primary);
+    color: var(--surface);
+}
+
+#proyek li a.project-secondary {
+    background-color: transparent;
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+#proyek li a:hover {
+    background-color: var(--secondary);
+}
+
+/* =========================
+   ACHIEVEMENTS
+========================= */
+
+#prestasi ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#prestasi li {
+    background-color: var(--background);
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+#prestasi li:hover {
+    transform: translateY(-4px);
+    border-color: var(--secondary);
+}
+
+#prestasi li h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#prestasi li p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* =========================
+   CERTIFICATIONS
+========================= */
+
+#sertifikasi ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#sertifikasi li {
+    background-color: var(--background);
+    padding: 26px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+#sertifikasi li:hover {
+    transform: translateY(-4px);
+    border-color: var(--secondary);
+}
+
+#sertifikasi li h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 19px;
+    line-height: 1.4;
+}
+
+#sertifikasi li p {
+    margin-bottom: 0;
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* =========================
+   CURRENTLY LEARNING
+========================= */
+
+#belajar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#belajar li {
+    background-color: var(--background);
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    transition: all 0.3s ease;
+}
+
+#belajar li:hover {
+    transform: translateY(-4px);
+    border-color: var(--secondary);
+}
+
+#belajar li h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+#belajar li p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* =========================
+   LANGUAGES & INTERESTS
+========================= */
+
+#bahasa ul,
+#minat ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#bahasa li,
+#minat li {
+    background-color: var(--background);
+    color: var(--primary);
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#bahasa li:hover,
+#minat li:hover {
+    background-color: var(--accent);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   FAQ
+========================= */
+
+#faq h3 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+#faq h3:not(:first-of-type) {
+    margin-top: 25px;
+}
+
+#faq p {
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+#kontak ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#kontak li {
+    margin-bottom: 0;
+}
+
+#kontak a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+#kontak a:hover {
+    background-color: var(--accent);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .nav-contact {
+        display: none;
+    }
+
+    body {
+        padding: 15px;
+    }
+
+    header {
+        padding: 40px 20px;
+    }
+
+    header h1 {
+        font-size: 38px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main section {
+        padding: 30px 22px;
+    }
+
+    main section h2 {
+        font-size: 30px;
+    }
+
+    #proyek ul,
+    #pengalaman ul,
+    #prestasi ul,
+    #sertifikasi ul,
+    #belajar ul,
+    #pendidikan ul,
+    #organisasi ul {
+        grid-template-columns: 1fr;
+    }
+
+    nav {
+        padding: 12px 16px;
+    }
+
+    nav ul {
+        gap: 12px;
+        justify-content: center;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}
