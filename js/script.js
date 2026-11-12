@@ -101,3 +101,21 @@ if (yearElement) {
 }
 
 console.log("Tiara Portfolio berhasil dijalankan!");
+
+// ✨ SPARKLE CURSOR EFFECT
+
+document.addEventListener("mousemove", (e) => {
+    const sparkle = document.createElement("span");
+
+    sparkle.className = "cursor-sparkle";
+    sparkle.innerHTML = "✦";
+
+    sparkle.style.left = `${e.clientX}px`;
+    sparkle.style.top = `${e.clientY}px`;
+
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+        sparkle.remove();
+    }, 800);
+});

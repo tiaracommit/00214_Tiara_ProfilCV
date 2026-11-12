@@ -203,3 +203,34 @@ html[data-theme="light"] .hero-character { mix-blend-mode: screen; }
 
     mix-blend-mode: normal;
 }
+
+/* ✨ SPARKLE CURSOR */
+
+.cursor-sparkle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 99999;
+
+    color: #d9c4ff;
+    font-size: 14px;
+
+    transform: translate(-50%, -50%);
+    animation: sparkle-twinkle 0.8s ease-out forwards;
+}
+
+@keyframes sparkle-twinkle {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.2) rotate(90deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0) rotate(180deg);
+    }
+}
