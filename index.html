@@ -1,929 +1,125 @@
 <!DOCTYPE html>
-<<<<<<< HEAD
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tiara Maulia Putri Sidarta | Portfolio</title>
-
-  <!-- Bootstrap 5.3.3 (CSS saja, tanpa JavaScript Bootstrap), file lokal di folder css -->
-  <link rel="stylesheet" href="bootstrap.min.css">
-
-  <!-- Font dari Google Fonts: Pacifico (judul), Quicksand (isi) -->
+  <meta name="description" content="Portfolio Tiara Maulia Putri Sidarta, mahasiswa Sistem Informasi Universitas Dian Nuswantoro.">
+  <meta name="theme-color" content="#171126">
+  <title>Tiara Maulia Putri Sidarta — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS buatan sendiri (dipasang SETELAH Bootstrap supaya bisa menimpa) -->
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
 </head>
-
 <body>
+  <a class="skip-link" href="#konten">Lewati ke konten</a>
 
-  <!-- ===================== 1. NAVBAR ===================== -->
-  <nav class="navbar navbar-expand-xl sticky-top">
-    <div class="container">
-
-      <a class="navbar-brand" href="#beranda">✦ Tiara</a>
-
-      <!-- Tombol dark mode + hamburger (hamburger hanya tampil di layar kecil) -->
-      <div class="d-flex align-items-center gap-2 order-xl-last">
-        <button id="theme-button" class="btn btn-sm btn-outline-main" type="button">🌙 Mode Gelap</button>
-        <button id="hamburger" class="btn btn-sm btn-main d-xl-none" type="button"
-                aria-label="Buka menu" aria-expanded="false" aria-controls="menu">☰</button>
+  <header class="site-header" id="beranda">
+    <nav class="navbar shell" aria-label="Navigasi utama">
+      <a class="brand" href="#beranda" aria-label="Tiara — kembali ke beranda"><span class="brand-mark">✦</span><span>tiara<span class="brand-dot">.porto</span></span></a>
+      <button class="menu-toggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu"><span></span><span></span><span></span></button>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="#pengalaman">Pengalaman</a></li>
+        <li><a href="#proyek">Proyek</a></li>
+        <li><a href="#keahlian">Keahlian</a></li>
+        <li><a href="#kontak">Kontak</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Aktifkan mode terang"><span class="theme-icon" aria-hidden="true">☼</span><span class="theme-label">Light mode</span></button>
+        <a class="nav-cta" href="#kontak">Let’s talk <span aria-hidden="true">↗</span></a>
       </div>
-
-      <!-- Daftar menu. Class "show" ditambah/dihapus oleh JavaScript -->
-      <div id="menu" class="navbar-collapse collapse">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
-          <li class="nav-item"><a class="nav-link" href="#proyek">Proyek</a></li>
-          <li class="nav-item"><a class="nav-link" href="#pencapaian">Pencapaian</a></li>
-          <li class="nav-item"><a class="nav-link" href="#sertifikasi">Sertifikasi</a></li>
-          <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
-          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </nav>
-
-  <!-- ===================== 2. HEADER / HERO ===================== -->
-  <header id="beranda" class="hero text-center">
-    <div class="container"></div>>
-      <img src="images/kucing.jpg" alt="Foto profil Tiara" class="hero-photo">
-      <h1 class="hero-name">Tiara Maulia Putri Sidarta</h1>
-      <p class="hero-tagline">
-        Mahasiswa Sistem Informasi | AI × Produk × Bisnis | Membangun Solusi Berbasis Teknologi | Alumni McKinsey Forward
-      </p>
-      <div class="d-flex justify-content-center flex-wrap gap-2">
-        <a href="#proyek" class="btn btn-main">Lihat Proyek</a>
-        <a href="#kontak" class="btn btn-outline-main">Hubungi Saya</a>
-      </div>
-    </div>
+    </nav>
   </header>
-  <main>
-    <!-- ===================== 3. INTRO / HIGHLIGHT ===================== -->
-    <section id="highlight" class="py-5">
-      <div class="container">
-        <div class="row g-3 text-center">
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <p class="highlight-icon">🏆</p>
-              <h2 class="h5">Top 40 Hackathon</h2>
-              <p class="mb-0">Hackathon AI ASEAN Internasional sebagai ketua tim</p>
-            </div></article>
-          </div>
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <p class="highlight-icon">🚀</p>
-              <h2 class="h5">Microsoft Student Ambassador</h2>
-              <p class="mb-0">Menjadi ambassador untuk program Microsoft Student Ambassadors</p>
-            </div></article>
-          </div>
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <p class="highlight-icon">🎓</p>
-              <h2 class="h5">Alumni McKinsey Forward</h2>
-              <p class="mb-0">Program McKinsey.org Forward, 2026</p>
-            </div></article>
-            
+
+  <main id="konten" class="shell">
+    <section class="hero panel" aria-labelledby="hero-title">
+      <div class="hero-orbit orbit-one" aria-hidden="true"></div>
+      <div class="hero-orbit orbit-two" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> PORTFOLIO DIGITAL · 2026</p>
+        <p class="hero-kicker">Halo, aku Tiara <span aria-hidden="true">✧</span></p>
+        <h1 id="hero-title">Merangkai ide,<br><span>menciptakan dampak.</span></h1>
+        <p class="hero-description">Mahasiswa Sistem Informasi yang tertarik pada persimpangan teknologi, AI, bisnis, dan pengembangan produk digital.</p>
+        <div class="hero-tags" aria-label="Bidang minat"><span>AI & Technology</span><span>Product</span><span>Business</span></div>
+        <div class="hero-actions"><a class="button button-primary" href="#proyek">Lihat karya <span aria-hidden="true">↗</span></a><a class="button button-ghost" href="#tentang">Kenali aku</a></div>
+        <p class="hero-note"><span aria-hidden="true">✦</span> Currently learning, building, and making things happen.</p>
+      </div>
+      <div class="hero-art-wrap">
+        <div class="hero-art-label label-top">WITCH MODE: ON</div>
+        <img class="hero-character" src="images/tiara-character.png" alt="Ilustrasi karakter Tiara bergaya witchy pixel art bersama kucing hitam">
+        <span class="sparkle sparkle-a" aria-hidden="true">✦</span><span class="sparkle sparkle-b" aria-hidden="true">☾</span><span class="sparkle sparkle-c" aria-hidden="true">✧</span>
+        <div class="hero-art-label label-bottom">FOCUS · PLAN · CREATE</div>
+      </div>
+      <div class="hero-index" aria-hidden="true">01 / 06</div>
+    </section>
+
+    <section class="intro-strip" aria-label="Informasi singkat">
+      <span>✦ SISTEM INFORMASI</span><span>✦ UNIVERSITAS DIAN NUSWANTORO</span><span>✦ CLASS OF 2025</span><span>✦ INDONESIA</span>
+    </section>
+
+    <section class="content-grid" id="tentang">
+      <article class="panel section-card about-card">
+        <div class="section-heading"><p class="eyebrow">01 — THE PERSON</p><h2>Tentang Saya<span class="heading-star">✦</span></h2></div>
+        <div class="about-layout">
+          <img class="profile-photo" src="images/image.png" alt="Foto profil Tiara" loading="lazy">
+          <div>
+            <p class="lead">Aku Tiara Maulia Putri Sidarta, mahasiswa Sistem Informasi di Universitas Dian Nuswantoro.</p>
+            <p>Aku memiliki ketertarikan pada teknologi, kecerdasan buatan, bisnis, dan pengembangan produk digital. Aku senang mempelajari hal baru, bekerja bersama tim, serta mengubah ide menjadi solusi yang bermanfaat.</p>
+            <div class="profile-facts"><span><b>Nama</b> Tiara Maulia Putri Sidarta</span><span><b>Status</b> Mahasiswa · 2025</span><span><b>Fokus</b> AI × Product × Business</span></div>
           </div>
         </div>
+      </article>
+
+      <aside class="panel mini-card education-card">
+        <p class="eyebrow">CURRENT CHAPTER</p><div class="mini-icon" aria-hidden="true">✧</div>
+        <h3>Universitas Dian Nuswantoro</h3><p>Sistem Informasi</p><span class="year-pill">2025 — sekarang</span>
+        <div class="card-footnote">Belajar memahami teknologi sekaligus kebutuhan manusia.</div>
+      </aside>
+    </section>
+
+    <section class="panel section-card" id="pengalaman">
+      <div class="section-heading heading-row"><div><p class="eyebrow">02 — THE JOURNEY</p><h2>Pengalaman & Organisasi</h2></div><span class="section-stamp">LEARN / LEAD / GROW</span></div>
+      <div class="timeline">
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">2026 · COMMUNITY</p><h3>Microsoft Student Ambassador</h3><p>Terpilih sebagai Microsoft Student Ambassador 2026.</p></div><span class="timeline-type">COMMUNITY</span></article>
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">ORGANIZATION</p><h3>Biro Sistem Informasi</h3><p>Sekretaris.</p></div><span class="timeline-type">ORGANIZATION</span></article>
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">ORGANIZATION</p><h3>BKM</h3><p>Anggota Divisi Kajian Strategis.</p></div><span class="timeline-type">ORGANIZATION</span></article>
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">PROJECT & LEADERSHIP</p><h3>Project Leader & Hackathon Team Leader</h3><p>Memimpin pengerjaan proyek akademik dan tim dalam pengembangan ide serta solusi berbasis teknologi.</p></div><span class="timeline-type">LEADERSHIP</span></article>
+        <article class="timeline-item"><span class="timeline-marker">✦</span><div><p class="timeline-meta">OTHER EXPERIENCE</p><h3>Private Tutor & Presenter</h3><p>Mengajar Bahasa Inggris dan Matematika secara privat serta mempresentasikan proyek dan gagasan dalam forum akademik.</p></div><span class="timeline-type">COMMUNICATION</span></article>
       </div>
     </section>
 
-    <!-- ===================== 4. TENTANG SAYA ===================== -->
-    <section id="tentang" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Tentang Saya</h2>
-        <div class="row align-items-center g-4">
-          <div class="col-md-4 text-center">
-            <img src="images/hancock.jpg" alt="Karakter ilustrasi Tiara" class="about-character">
-          </div>
-          <div class="col-md-8">
-            <p>
-              Saya mahasiswa Sistem Informasi yang tertarik pada teknologi, bisnis,
-              kecerdasan buatan, dan pengembangan produk digital.
-              Saya senang belajar hal baru dan mengubah ide menjadi proyek yang bisa
-              menyelesaikan masalah nyata.
-              Saya aktif di organisasi kampus dan sering memimpin proyek maupun tim lomba.
-            </p>
-            <ul class="list-unstyled mb-0">
-              <li><strong>Nama:</strong> Tiara Maulia Putri Sidarta</li>
-              <li><strong>Jurusan:</strong> Sistem Informasi</li>
-              <li><strong>Status:</strong> Mahasiswa</li>
-              <li><strong>Minat:</strong> Teknologi, Bisnis, dan AI</li>
-            </ul>
-          </div>
-        </div>
+    <section class="panel section-card" id="proyek">
+      <div class="section-heading heading-row"><div><p class="eyebrow">03 — SELECTED WORK</p><h2>Proyek Pilihan</h2></div><p class="section-description">Beberapa ide yang sedang dan pernah aku kembangkan bersama tim.</p></div>
+      <div class="project-grid">
+        <article class="project-card project-reuang"><div class="project-visual visual-reuang" aria-hidden="true"><span class="visual-window"><i></i><i></i><i></i><b>REUANG</b><small>BUSINESS DASHBOARD</small><span class="visual-bars"><i></i><i></i><i></i><i></i></span></span><span class="visual-orbit">✧</span></div><div class="project-content"><div class="project-meta"><span>BUSINESS TECHNOLOGY</span><span>01</span></div><h3>REUANG</h3><p>Sistem manajemen pesanan untuk UMKM yang terintegrasi dengan WhatsApp dan Telegram. Mencakup katalog produk dan HPP, manajemen pesanan, verifikasi pembayaran, serta laporan penjualan dan laba.</p><div class="project-links"><a href="https://github.com/cyrzll/reuang" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://reuang-v1.vercel.app/" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a></div></div></article>
+        <article class="project-card project-tracia"><div class="project-visual visual-tracia" aria-hidden="true"><span class="tracia-shield">♡</span><span class="tracia-orbit orbit-left">✦</span><span class="tracia-orbit orbit-right">✧</span><span class="visual-caption">AI · HUMAN · IMPACT</span></div><div class="project-content"><div class="project-meta"><span>AI & SOCIAL IMPACT</span><span>02</span></div><h3>TRACIA</h3><p>Inisiatif/organisasi yang menaungi BeBrave.ai, dengan fokus pada pemanfaatan teknologi untuk mendukung dampak sosial. BeBrave.ai merupakan salah satu aplikasi yang dikembangkan dalam lingkup ini.</p><div class="project-links"><a href="https://github.com/tracia-AI/BeBrave.ai" target="_blank" rel="noopener noreferrer">Repository terkait <span>↗</span></a></div></div></article>
+        <article class="project-card project-bebrave"><div class="project-visual visual-bebrave" aria-hidden="true"><span class="timeline-paper"><b>AI TIMELINE</b><i></i><i></i><i></i><i></i><small>CHRONOLOGY DRAFT</small></span><span class="brave-spark">✦</span></div><div class="project-content"><div class="project-meta"><span>AI APPLICATION</span><span>03</span></div><h3>BeBrave.ai</h3><p>Aplikasi berbasis AI yang membantu pengguna menyusun cerita menjadi draf laporan kronologis terstruktur, termasuk waktu, tempat, pihak terlibat, bukti, dan dampak. Menggunakan Google Gemini AI.</p><div class="project-links"><a href="https://github.com/tracia-AI/BeBrave.ai" target="_blank" rel="noopener noreferrer">GitHub <span>↗</span></a><a href="https://bebraveaimarkoding.netlify.app/" target="_blank" rel="noopener noreferrer">Live demo <span>↗</span></a></div></div></article>
       </div>
     </section>
 
-    <!-- ===================== 5. PENDIDIKAN ===================== -->
-    <section id="pendidikan" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Pendidikan</h2>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Universitas Dian Nuswantoro</h3>
-              <p class="mb-0">Sistem Informasi · 2025 - 2028</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">SMAN 5 Taruna Brawijaya</h3>
-              <p class="mb-0">2019 - 2022</p>
-            </div></article>
-          </div>
-        </div>
-      </div>
+    <section class="content-grid achievement-grid">
+      <article class="panel section-card" id="pencapaian"><div class="section-heading"><p class="eyebrow">04 — LITTLE WINS</p><h2>Pencapaian</h2></div><ul class="achievement-list"><li><span>✦</span><div><b>Top 40 — International AI ASEAN Hackathon</b><p>Finalis bersama tim sebagai team leader.</p></div></li><li><span>✦</span><div><b>PKM-KC</b><p>Berpartisipasi sebagai project leader.</p></div></li><li><span>✦</span><div><b>Business Plan & Business Case</b><p>Berpartisipasi dalam kompetisi sebagai team leader.</p></div></li><li><span>✦</span><div><b>Speech Competition</b><p>Mencapai babak final kompetisi pidato.</p></div></li><li><span>✦</span><div><b>Conference Presenter</b><p>Mempresentasikan proyek dan gagasan berbasis riset dalam konferensi akademik.</p></div></li></ul></article>
+      <article class="panel section-card" id="sertifikasi"><div class="section-heading"><p class="eyebrow">05 — LEARNING PROOF</p><h2>Sertifikasi</h2></div><ul class="certificate-list"><li><b>Microsoft Applied Skills</b><span>Streamline Business Workflows with AI Chat · 2026</span></li><li><b>Microsoft Applied Skills</b><span>Generate Reports with AI Research Agents · 2026</span></li><li><b>McKinsey.org Forward Program</b><span>McKinsey & Company · 2026</span></li><li><b>GS-Sigret Presenter Certificate</b><span>Universitas Sultan Ageng Tirtayasa · 2025</span></li><li><b>Certificate of Appreciation — International BMC</b><span>Universitas Muhammadiyah Yogyakarta · 2025</span></li><li><b>Language Certificates</b><span>English dan German courses · 2022–2023</span></li></ul></article>
     </section>
 
-    <!-- ===================== 6. PENGALAMAN & ORGANISASI ===================== -->
-    <section id="pengalaman" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Pengalaman dan Organisasi</h2>
-
-        <h3 class="sub-title">Organisasi</h3>
-        <div class="row g-3 mb-4">
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h4 class="h5">Biro Sistem Informasi</h4>
-              <p class="mb-0">Sekretaris</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h4 class="h5">BKM</h4>
-              <p class="mb-0">Anggota Divisi Kajian Strategis</p>
-            </div></article>
-          </div>
-        </div>
-
-        <h3 class="sub-title">Pengalaman</h3>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h4 class="h5">Project Leader</h4>
-              <p class="mb-0">Memimpin beberapa proyek akademik dan kompetisi.</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h4 class="h5">Ketua Tim Hackathon</h4>
-              <p class="mb-0">Memimpin tim mengembangkan ide dan solusi berbasis teknologi.</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h4 class="h5">Guru Privat</h4>
-              <p class="mb-0">Mengajar Bahasa Inggris dan Matematika untuk siswa privat.</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h4 class="h5">Presenter</h4>
-              <p class="mb-0">Mempresentasikan proyek dan ide di konferensi akademik.</p>
-            </div></article>
-          </div>
-        </div>
-      </div>
+    <section class="panel section-card" id="keahlian">
+      <div class="section-heading"><p class="eyebrow">06 — MY TOOLKIT</p><h2>Keahlian & Minat</h2></div>
+      <div class="skills-layout"><div><h3>Technical skills</h3><div class="skill-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>C++</span><span>Git & GitHub</span><span>Web Development</span></div></div><div><h3>Business & product</h3><div class="skill-tags"><span>Business Analysis</span><span>Problem Solving</span><span>Product Ideation</span><span>Project Management</span></div></div><div><h3>Professional skills</h3><div class="skill-tags"><span>Leadership</span><span>Communication</span><span>Presentation</span><span>Teamwork</span></div></div><div><h3>Currently exploring</h3><div class="skill-tags"><span>Artificial Intelligence</span><span>Data & Analytics</span><span>Digital Product</span><span>Entrepreneurship</span></div></div></div>
+      <div class="learning-note"><span class="learning-icon">☾</span><p><b>Currently learning:</b> pengembangan web, data dan AI, strategi bisnis, serta workflow kolaborasi menggunakan Git & GitHub.</p><span class="learning-star">✧</span></div>
     </section>
 
-    <!-- ===================== 7. PROYEK PILIHAN ===================== -->
-    <section id="proyek" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Proyek Pilihan</h2>
-        <div class="row g-3">
-
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">REUANG</h3>
-              <p>
-                Asisten bisnis AI untuk UMKM F&amp;B yang membantu mengelola pesanan lewat
-                WhatsApp dan Telegram. Dikerjakan sebagai proyek tim; saya berperan sebagai
-                CEO dan Project Lead (arah produk, strategi bisnis, dan eksekusi proyek).
-              </p>
-              <a href="https://reuang-v1.vercel.app/" class="btn btn-sm btn-main" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a href="https://github.com/cyrzll/reuang" class="btn btn-sm btn-outline-main" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div></article>
-          </div>
-
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">TRACIA</h3>
-              <p>
-                Proyek hackathon yang mengembangkan solusi berbasis teknologi untuk
-                menjawab masalah di dunia nyata.
-              </p>
-              <a href="https://github.com/cyrzll/tracia" class="btn btn-sm btn-main" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div></article>
-          </div>
-
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">BeBrave.ai</h3>
-              <p>
-                Aplikasi berbasis AI yang membantu pengguna menyusun cerita menjadi
-                kronologi kejadian yang terstruktur dan faktual.
-              </p>
-              <a href="https://tracia-ai.github.io/BeBrave.ai/" class="btn btn-sm btn-main" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a href="https://github.com/tiaracommit/BeBrave.ai" class="btn btn-sm btn-outline-main" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div></article>
-          </div>
-
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Website Profil Pribadi</h3>
-              <p>
-                Website profil yang dibuat dengan HTML sebagai bagian dari
-                perjalanan belajar pengembangan web saya.
-              </p>
-              <a href="https://tiaracommit.github.io/00214_Tiara_ProfilCV/" class="btn btn-sm btn-main" target="_blank" rel="noopener noreferrer">Demo</a>
-              <a href="https://github.com/tiaracommit/00214_Tiara_ProfilCV" class="btn btn-sm btn-outline-main" target="_blank" rel="noopener noreferrer">GitHub</a>
-            </div></article>
-          </div>
-
-        </div>
-      </div>
+    <section class="content-grid final-grid">
+      <article class="panel section-card" id="faq"><div class="section-heading"><p class="eyebrow">A FEW ANSWERS</p><h2>FAQ</h2></div><div class="accordion">
+        <div class="accordion-item"><h3><button class="accordion-trigger" type="button" aria-expanded="false">Apa yang sedang aku pelajari?<span>＋</span></button></h3><div class="accordion-panel" hidden><p>Aku sedang mempelajari pengembangan web, data, AI, serta pengembangan produk dan bisnis.</p></div></div>
+        <div class="accordion-item"><h3><button class="accordion-trigger" type="button" aria-expanded="false">Project seperti apa yang aku sukai?<span>＋</span></button></h3><div class="accordion-panel" hidden><p>Aku tertarik pada proyek berbasis teknologi yang berangkat dari kebutuhan nyata dan punya potensi memberi dampak.</p></div></div>
+        <div class="accordion-item"><h3><button class="accordion-trigger" type="button" aria-expanded="false">Bagaimana cara menghubungiku?<span>＋</span></button></h3><div class="accordion-panel" hidden><p>Kamu bisa menghubungiku melalui email atau media sosial yang tersedia pada bagian kontak.</p></div></div>
+      </div></article>
+      <aside class="panel contact-card" id="kontak"><p class="eyebrow">LET’S CONNECT</p><span class="contact-moon" aria-hidden="true">☾</span><h2>Punya ide menarik?</h2><p>Terbuka untuk diskusi, kolaborasi, dan kesempatan belajar bersama.</p><a class="button button-primary" href="mailto:tiaracommittech@gmail.com">Kirim email <span>↗</span></a><div class="social-links"><a href="https://www.linkedin.com/in/tiara-maulia-putri-sidarta-986897319/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="https://github.com/tiaracommit" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://wa.me/6285707381852" target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></aside>
     </section>
-
-    <!-- ===================== 8. PENCAPAIAN ===================== -->
-    <section id="pencapaian" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Pencapaian</h2>
-        <div class="row g-3">
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Microsoft Student Ambassador</h3>
-              <p class="mb-0">Menjadi Microsoft Student Ambassador.</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Finalis Hackathon</h3>
-              <p class="mb-0">Top 40 di kompetisi Hackathon AI ASEAN Internasional sebagai ketua tim.</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">PKM-KC</h3>
-              <p class="mb-0">Mengikuti kompetisi PKM-KC sebagai ketua proyek.</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Business Plan &amp; Business Case</h3>
-              <p class="mb-0">Mengikuti lomba business plan dan business case sebagai ketua tim.</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Finalis Lomba Pidato</h3>
-              <p class="mb-0">Mencapai babak final lomba pidato.</p>
-            </div></article>
-          </div>
-          <div class="col-md-6">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Presenter Konferensi</h3>
-              <p class="mb-0">Mempresentasikan proyek dan gagasan berbasis riset di konferensi akademik.</p>
-            </div></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 9. SERTIFIKASI ===================== -->
-    <section id="sertifikasi" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Lisensi dan Sertifikasi</h2>
-        <div class="row g-3">
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">Microsoft Applied Skills: Streamline Business Workflows with AI Chat</h3>
-            <p class="mb-0">Microsoft · Sep 2026</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">Microsoft Applied Skills: Generate Reports with AI Research Agents</h3>
-            <p class="mb-0">Microsoft · Mar 2026</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">McKinsey.org Forward Program</h3>
-            <p class="mb-0">McKinsey &amp; Company · Jun 2026</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">Certificate of Completion</h3>
-            <p class="mb-0">Universitas Dian Nuswantoro · Jan 2026</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">Certificate of Appreciation – International BMC</h3>
-            <p class="mb-0">Universitas Muhammadiyah Yogyakarta · Des 2025</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">GS-Sigret Presenter Certificate</h3>
-            <p class="mb-0">Universitas Sultan Ageng Tirtayasa · Nov 2025</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">Certificate of Achievement – TOEFL English Prediction Test</h3>
-            <p class="mb-0">Englishvit · Jul 2023</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">Grammar Advanced Certificate</h3>
-            <p class="mb-0">International Language Training Institute ELF Education · Nov 2022</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">Grammar Preparation Certificate</h3>
-            <p class="mb-0">International Language Training Institute ELF Education · Sep 2022</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">A1.2 German Course Certificate</h3>
-            <p class="mb-0">International Language Training Institute ELF Education · Sep 2022</p>
-          </div></article></div>
-          <div class="col-md-6"><article class="card h-100"><div class="card-body">
-            <h3 class="h6">A1.1 German Course Certificate</h3>
-            <p class="mb-0">International Language Training Institute ELF Education · Agu 2022</p>
-          </div></article></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 10. KEAHLIAN & MINAT ===================== -->
-    <section id="keahlian" class="py-5">
-      <div class="container">
-        <h2 class="section-title">Keahlian dan Minat</h2>
-
-        <div class="row g-3">
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Keahlian Teknis</h3>
-              <span class="badge rounded-pill skill-badge">HTML</span>
-              <span class="badge rounded-pill skill-badge">CSS</span>
-              <span class="badge rounded-pill skill-badge">JavaScript</span>
-              <span class="badge rounded-pill skill-badge">C++</span>
-              <span class="badge rounded-pill skill-badge">Git &amp; GitHub</span>
-              <span class="badge rounded-pill skill-badge">Pengembangan Web</span>
-            </div></article>
-          </div>
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Bisnis dan Produk</h3>
-              <span class="badge rounded-pill skill-badge">Analisis Bisnis</span>
-              <span class="badge rounded-pill skill-badge">Pemecahan Masalah</span>
-              <span class="badge rounded-pill skill-badge">Ide Produk</span>
-              <span class="badge rounded-pill skill-badge">Manajemen Proyek</span>
-            </div></article>
-          </div>
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Keahlian Profesional</h3>
-              <span class="badge rounded-pill skill-badge">Kepemimpinan</span>
-              <span class="badge rounded-pill skill-badge">Komunikasi</span>
-              <span class="badge rounded-pill skill-badge">Presentasi</span>
-              <span class="badge rounded-pill skill-badge">Kerja Sama Tim</span>
-            </div></article>
-          </div>
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Minat</h3>
-              <span class="badge rounded-pill skill-badge">Kecerdasan Buatan</span>
-              <span class="badge rounded-pill skill-badge">Teknologi &amp; Inovasi</span>
-              <span class="badge rounded-pill skill-badge">Bisnis &amp; Kewirausahaan</span>
-              <span class="badge rounded-pill skill-badge">Produk Digital</span>
-              <span class="badge rounded-pill skill-badge">Data &amp; Analitik</span>
-              <span class="badge rounded-pill skill-badge">Kepemimpinan</span>
-            </div></article>
-          </div>
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Sedang Dipelajari</h3>
-              <span class="badge rounded-pill skill-badge">Pengembangan Web</span>
-              <span class="badge rounded-pill skill-badge">Data &amp; AI</span>
-              <span class="badge rounded-pill skill-badge">Strategi Bisnis</span>
-              <span class="badge rounded-pill skill-badge">Git &amp; GitHub</span>
-            </div></article>
-          </div>
-          <div class="col-md-4">
-            <article class="card h-100"><div class="card-body">
-              <h3 class="h5">Bahasa</h3>
-              <span class="badge rounded-pill skill-badge">Indonesia (Native)</span>
-              <span class="badge rounded-pill skill-badge">Jawa (Native)</span>
-              <span class="badge rounded-pill skill-badge">Inggris (B1-B2)</span>
-              <span class="badge rounded-pill skill-badge">Jerman (A1)</span>
-            </div></article>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 11. FAQ (ACCORDION) ===================== -->
-    <section id="faq" class="py-5">
-      <div class="container">
-        <h2 class="section-title">FAQ</h2>
-
-        <!-- Setiap .faq-item = 1 pertanyaan + 1 jawaban.
-             Jawaban tampil kalau .faq-item punya class "active". -->
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">Apa yang sedang kamu pelajari di kuliah?</button>
-          <div class="faq-answer"><p>Saya sedang kuliah di jurusan Sistem Informasi.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">Apa minat kamu?</button>
-          <div class="faq-answer"><p>Saya tertarik pada teknologi, kecerdasan buatan, bisnis, dan pengembangan produk digital.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">Apa yang sedang kamu pelajari sekarang?</button>
-          <div class="faq-answer"><p>Saya sedang belajar pengembangan web, data, AI, dan keterampilan bisnis.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">Proyek seperti apa yang kamu suka?</button>
-          <div class="faq-answer"><p>Saya suka membuat proyek berbasis teknologi yang menyelesaikan masalah nyata.</p></div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">Apa tujuan kamu ke depan?</button>
-          <div class="faq-answer"><p>Saya ingin mengembangkan kemampuan di bidang teknologi dan bisnis sambil membangun produk dan proyek yang bermanfaat.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===================== 12. KONTAK ===================== -->
-    <section id="kontak" class="py-5">
-      <div class="container text-center">
-        <h2 class="section-title">Kontak</h2>
-        <p>Ingin berkolaborasi atau sekadar menyapa? Hubungi saya lewat:</p>
-        <div class="d-flex justify-content-center flex-wrap gap-2">
-          <a href="mailto:tiaracommittech@gmail.com" class="btn btn-main">Email</a>
-          <a href="https://wa.me/6285707381852" class="btn btn-main" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-          <a href="https://www.linkedin.com/in/tiara-maulia-putri-sidarta-986897319/" class="btn btn-main" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/tiaracommit" class="btn btn-main" target="_blank" rel="noopener noreferrer">GitHub</a>
-        </div>
-      </div>
-    </section>
-
   </main>
 
-  <!-- ===================== 13. FOOTER ===================== -->
-  <footer class="py-4 text-center">
-    <p class="mb-0">&copy; 2026 Tiara Maulia Putri Sidarta · Universitas Dian Nuswantoro</p>
-  </footer>
-
-  <!-- JavaScript dipasang paling bawah supaya semua elemen HTML sudah ada -->
-  <script src="script.js"></script>
+  <footer class="site-footer shell"><a class="footer-brand" href="#beranda">✦ Tiara</a><p>Dirancang dengan rasa ingin tahu dan sedikit magic.</p><p>© <span id="current-year">2026</span> Tiara Maulia Putri Sidarta</p><a class="back-top" href="#beranda" aria-label="Kembali ke atas">↑</a></footer>
 </body>
-=======
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Profil</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-   <header>
-    <img src="images/Idolaku.jpg" alt="Profile photo" width="500" height="600">
-    <h1>Tiara Maulia Putri Sidarta</h1>    
-    <p>Information Systems Student | AI × Product × Business | Building Technology-Driven Solutions | McKinsey Forward Alumni</p>
-   </header> 
-
-<nav>
-    <div class="nav-brand">
-        <a href="#">✦</a>
-    </div>
-
-    <ul>
-        <li><a href="#tentang">About</a></li>
-        <li><a href="#proyek">Projects</a></li>
-        <li><a href="#pengalaman">Experience</a></li>
-        <li><a href="#keahlian">Skills</a></li>
-    </ul>
-
-    <div class="nav-contact">
-        <a href="#kontak">Contact</a>
-    </div>
-</nav>
-
-<main>
-
-   <section id="tentang">
-    <h2>About Me</h2>
-    <p>
-        I am an Information Systems student with a strong interest in
-        technology, business, artificial intelligence, and digital product development.
-        I enjoy learning new things and turning ideas into projects that
-        can solve real-world problems.
-    </p>
-   </section>
-
-<section id="biodata">
-    <h2>Profile</h2>
-
-    <ul>
-        <li>Name: Tiara Maulia Putri Sidarta</li>
-        <li>Major: Information Systems</li>
-        <li>Status: Student</li>
-        <li>Interests: Technology, Business, and AI</li>
-    </ul>
-</section>
-
-    <section id="pendidikan">
-    <h2>Education</h2>
-
-    <ul>
-        <li>
-            <h3>SMAN 5 Taruna Brawijaya</h3>
-            <p>2019 - 2022</p>
-        </li>
-
-        <li>
-            <h3>Universitas Dian Nuswantoro</h3>
-            <p>2025 - 2028</p>
-        </li>
-    </ul>
-</section>
-
-<section id="keahlian">
-    <h2>Skills</h2>
-
-    <h3>Technical Skills</h3>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>C++</li>
-        <li>Git & GitHub</li>
-        <li>Web Development</li>
-    </ul>
-
-    <h3>Business & Product</h3>
-    <ul>
-        <li>Business Analysis</li>
-        <li>Problem Solving</li>
-        <li>Product Ideation</li>
-        <li>Project Management</li>
-    </ul>
-
-    <h3>Professional Skills</h3>
-    <ul>
-        <li>Leadership</li>
-        <li>Communication</li>
-        <li>Presentation</li>
-        <li>Teamwork</li>
-    </ul>
-</section>
-
-<section id="organisasi">
-    <h2>Organizations</h2>
-
-    <ul>
-        <li>
-            <h3>Biro Sistem Informasi</h3>
-            <p>Secretary</p>
-        </li>
-
-        <li>
-            <h3>BKM</h3>
-            <p>Member of Strategic Studies Division</p>
-        </li>
-    </ul>
-</section>
-
-<section id="pengalaman">
-    <h2>Experience</h2>
-
-    <ul>
-        <li>
-            <h3>Project Leader</h3>
-            <p>Led several academic projects and competitions.</p>
-        </li>
-
-        <li>
-            <h3>Hackathon Team Leader</h3>
-            <p>Led a team in developing technology-based ideas and solutions.</p>
-        </li>
-
-        <li>
-            <h3>Private Tutor</h3>
-            <p>Teaching English and Mathematics to private students.</p>
-        </li>
-
-        <li>
-            <h3>Presenter</h3>
-            <p>Presented projects and ideas in academic conferences.</p>
-        </li>
-    </ul>
-</section>
-
-<section id="proyek">
-    <h2>Projects</h2>
-
-    <ul>
-        <li>
-            <h3>REUANG</h3>
-            <p>
-                AI Business Assistant for F&B MSMEs, developed as a team project.
-    Served as CEO and Project Lead, leading product direction,
-    business strategy, and project execution.
-            </p>
-            <p>
-                <a class="project-primary" href="https://reuang-v1.vercel.app/" target="_blank" rel="noopener">
-    Live Demo
-</a>
-<a class="project-secondary" href="https://github.com/cyrzll/reuang" target="_blank" rel="noopener">
-    GitHub
-</a>
-            </p>
-        </li>
-
-        <li>
-            <h3>TRACIA</h3>
-            <p>
-                A hackathon project focused on developing a technology-based
-                solution to address a real-world problem.
-            </p>
-            <p>
-    <a class="project-primary" href="https://github.com/cyrzll/tracia" target="_blank" rel="noopener">
-        GitHub
-    </a>
-</p>
-        </li>
-
-        <li>
-            <h3>BeBrave.ai</h3>
-            <p>
-                An AI-powered application designed to help users create
-                structured and factual incident chronologies.
-            </p>
-            <p>
-    <a class="project-primary" href="https://bebraveaimarkoding.netlify.app/" target="_blank" rel="noopener">
-        Live Demo
-    </a>
-
-    <a class="project-secondary" href="https://github.com/tiaracommit/BeBrave.ai" target="_blank" rel="noopener">
-        GitHub
-    </a>
-</p>
-        </li>
-
-        <li>
-            <h3>Personal Profile Website</h3>
-            <p>
-                A personal profile website built with HTML as part of my
-                web development learning journey.
-            </p>
-           <p>
-    <a class="project-primary" href="https://tiaracommit.github.io/00214_Tiara_ProfilCV/" target="_blank" rel="noopener">
-        Live Demo
-    </a>
-
-    <a class="project-secondary" href="https://github.com/tiaracommit/00214_Tiara_ProfilCV" target="_blank" rel="noopener">
-        GitHub
-    </a>
-</p>
-        </li>
-    </ul>
-</section>
-
-<section id="prestasi">
-    <h2>Achievements</h2>
-
-    <ul>
-        <li>
-            <h3>Hackathon Finalist</h3>
-            <p>
-                Top 40 in an International AI ASEAN Hackathon competition as a team leader.
-            </p>
-        </li>
-
-        <li>
-            <h3>PKM-KC</h3>
-            <p>
-                Participated in the PKM-KC competition as a project leader.
-            </p>
-        </li>
-
-        <li>
-            <h3>Business Plan & Business Case Competitions</h3>
-            <p>
-                Participated in business plan and business case competitions
-                as a team leader.
-            </p>
-        </li>
-
-        <li>
-            <h3>Speech Competition Finalist</h3>
-            <p>
-                Reached the final round of a speech competition.
-            </p>
-        </li>
-
-        <li>
-            <h3>Conference Presenter</h3>
-            <p>
-                Presented a project and research-based ideas at an academic conference.
-            </p>
-        </li>
-    </ul>
-</section>
-
-<section id="sertifikasi">
-    <h2>Licenses & Certifications</h2>
-
-    <ul>
-        <li>
-            <h3>Microsoft Applied Skills: Streamline Business Workflows with AI Chat</h3>
-            <p>Microsoft · Issued Sep 2026</p>
-        </li>
-
-        <li>
-            <h3>Microsoft Applied Skills: Generate Reports with AI Research Agents</h3>
-            <p>Microsoft · Issued Mar 2026</p>
-        </li>
-
-        <li>
-            <h3>McKinsey.org Forward Program</h3>
-            <p>McKinsey & Company · Issued Jun 2026</p>
-        </li>
-
-        <li>
-            <h3>Certificate of Completion</h3>
-            <p>Universitas Dian Nuswantoro · Issued Jan 2026</p>
-        </li>
-
-        <li>
-            <h3>Certificate of Appreciation – International BMC</h3>
-            <p>Universitas Muhammadiyah Yogyakarta · Issued Dec 2025</p>
-        </li>
-
-        <li>
-            <h3>Certificate of Achievement – TOEFL English Prediction Test</h3>
-            <p>Englishvit · Issued Jul 2023</p>
-        </li>
-
-        <li>
-            <h3>A1.2 German Course Certificate</h3>
-            <p>International Language Training Institute ELF Education · Issued Sep 2022</p>
-        </li>
-
-        <li>
-            <h3>A1.1 German Course Certificate</h3>
-            <p>International Language Training Institute ELF Education · Issued Aug 2022</p>
-        </li>
-
-        <li>
-            <h3>Grammar Advanced Certificate</h3>
-            <p>International Language Training Institute ELF Education · Issued Nov 2022</p>
-        </li>
-
-        <li>
-            <h3>Grammar Preparation Certificate</h3>
-            <p>International Language Training Institute ELF Education · Issued Sep 2022</p>
-        </li>
-
-        <li>
-            <h3>GS-Sigret Presenter Certificate</h3>
-            <p>Universitas Sultan Ageng Tirtayasa · Issued Nov 2025</p>
-        </li>
-    </ul>
-</section>
-
-<section id="belajar">
-    <h2>Currently Learning</h2>
-
-    <ul>
-        <li>
-            <h3>Web Development</h3>
-            <p>
-                Learning HTML, CSS, and JavaScript to build modern and interactive websites.
-            </p>
-        </li>
-
-        <li>
-            <h3>Data & Artificial Intelligence</h3>
-            <p>
-                Exploring data analysis, machine learning, and AI application development.
-            </p>
-        </li>
-
-        <li>
-            <h3>Business & Product Development</h3>
-            <p>
-                Developing skills in business strategy, product development, and problem solving.
-            </p>
-        </li>
-
-        <li>
-            <h3>Git & GitHub</h3>
-            <p>
-                Improving version control and collaborative software development workflows.
-            </p>
-        </li>
-    </ul>
-</section>
-
-<section id="bahasa">
-    <h2>Languages</h2>
-
-    <ul>
-        <li>Indonesian (Native)</li>
-        <li>Javanese (Native)</li>
-        <li>English (B1-B2)</li>
-        <li>German (A1)</li>
-    </ul>
-</section>
-
-<section id="minat">
-    <h2>Interests</h2>
-
-    <ul>
-        <li>Artificial Intelligence</li>
-        <li>Technology & Innovation</li>
-        <li>Business & Entrepreneurship</li>
-        <li>Digital Product Development</li>
-        <li>Data & Analytics</li>
-        <li>Leadership & Project Management</li>
-        <li>Web Development</li>
-    </ul>
-</section>
-
-<section id="faq">
-    <h2>FAQ</h2>
-
-    <h3>What do you study?</h3>
-    <p>
-        I am currently studying Information Systems.
-    </p>
-
-    <h3>What are you interested in?</h3>
-    <p>
-        I am interested in technology, artificial intelligence,
-        business, and digital product development.
-    </p>
-
-    <h3>What are you currently learning?</h3>
-    <p>
-        I am currently learning web development, data, AI,
-        and business-related skills.
-    </p>
-
-    <h3>What kind of projects do you enjoy?</h3>
-    <p>
-        I enjoy building technology-based projects that solve
-        real-world problems.
-    </p>
-
-    <h3>What are your future goals?</h3>
-    <p>
-        I want to develop my skills in technology and business
-        while building meaningful products and projects.
-    </p>
-</section>
-
-<section id="kontak">
-    <h2>Contact</h2>
-
-    <ul>
-        <li>
-            <a href="mailto:tiaracommittech@gmail.com">
-                Email
-            </a>
-        </li>
-
-        <li>
-            <a href="https://wa.me/6285707381852"
-               target="_blank" rel="noopener">
-                WhatsApp
-            </a>
-        </li>
-
-        <li>
-            <a href="https://www.linkedin.com/in/tiara-maulia-putri-sidarta-986897319/"
-               target="_blank" rel="noopener">
-                LinkedIn
-            </a>
-        </li>
-
-        <li>
-            <a href="https://github.com/tiaracommit"
-               target="_blank" rel="noopener">
-                GitHub
-            </a>
-        </li>
-    </ul>
-</section>
-
-</main> 
-
-<footer> 
-    <p>&copy; 2026 Tiara Maulia Putri Sidarta</p> 
-</footer> 
-
-</body> 
->>>>>>> cd6b708365905dd1503f8de4e18e4c8519322e39
 </html>

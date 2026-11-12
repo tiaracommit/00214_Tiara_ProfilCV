@@ -1,24 +1,31 @@
-# Tugas 1 - Profil Pribadi
+# Portfolio Tiara — Y2K Witchy Retro
 
-Halaman profil pribadi dibuat menggunakan HTML5 semantik.
-
-## Live Demo
-
-https://tiaracommit.github.io/00214_Tiara_ProfilCV/
+Website portfolio pribadi untuk tugas UTS Pemrograman Web Dasar.
 
 ## Teknologi
+- HTML5 semantik
+- CSS3 native (tanpa framework CSS)
+- JavaScript vanilla (tanpa framework/library JavaScript)
 
-- HTML5
-- CSS
-- JavaScript
+## Fitur JavaScript
+1. Hamburger navigation untuk layar kecil.
+2. Tombol dark mode dan light mode; preferensi tema disimpan di localStorage.
+3. Accordion FAQ.
+4. Smooth scroll dan tahun footer otomatis.
 
-## Struktur Project
+## Struktur
+- `index.html` — halaman utama portfolio.
+- `css/style.css` — seluruh styling dan responsive layout.
+- `js/script.js` — interaktivitas JavaScript.
+- `images/Idolaku.jpg` — foto profil.
+- `images/tiara-character.png` — ilustrasi karakter portfolio.
 
-- `index.html` - Halaman utama profil
-- `images/` - Folder gambar
-- `style.css` - File styling
-- `script.js` - File JavaScript
+## Menjalankan website
+1. Ekstrak folder project.
+2. Buka folder `webku` di Visual Studio Code.
+3. Buka `index.html` di browser, atau gunakan ekstensi Live Server jika tersedia.
 
-## Cara Membuka
+Tidak diperlukan instalasi package atau build tools. Koneksi internet hanya digunakan untuk memuat font dari Google Fonts; website tetap memiliki fallback font jika font eksternal tidak tersedia.
 
-Buka file `index.html` langsung di browser, atau kunjungi link live di atas.
+## Catatan pengembangan
+`tailwind.html` dipertahankan dari project awal dan tidak digunakan sebagai halaman utama. Halaman yang dijalankan adalah `index.html`.

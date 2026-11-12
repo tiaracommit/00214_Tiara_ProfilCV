@@ -1,0 +1,15 @@
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'css/style.css', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'index.html', LF will be replaced by CRLF the next time Git touches it
+ README.md          |  49 [32m+[m[31m--[m
+ bootstrap.min.css  |   6 [31m-[m
+ coba.html          |  11 [31m-[m
+ css/style.css      | 841 [32m+++++++++++[m[31m----------------------------------[m
+ images/Idolaku.jpg | Bin [31m62348[m -> [32m0[m bytes
+ images/hancock.jpg | Bin [31m64463[m -> [32m0[m bytes
+ images/kucing.jpg  | Bin [31m38678[m -> [32m27368[m bytes
+ index.html         | 984 [32m+++++[m[31m------------------------------------------------[m
+ js/script.js       | 103 [32m++++++[m
+ script.js          | 107 [31m------[m
+ style.css          | 274 [31m---------------[m
+ 11 files changed, 418 insertions(+), 1957 deletions(-)
